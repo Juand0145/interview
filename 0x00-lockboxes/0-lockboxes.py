@@ -33,8 +33,7 @@ def canUnlockAll(boxes):
     """Method that determines if all the boxes can be opened."""
     if type(boxes) is not list:
         return False
-
-    if len(boxes) == 0:
+    elif (len(boxes)) == 0:
         return False
 
     opened_boxes = [0]
