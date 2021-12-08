@@ -2,42 +2,55 @@
 """Method that determines if all the boxes can be opened."""
 
 
-def unlocking_boxes(boxes, index_box, opened_boxes, keys):
-    """Recursive function to open the boxes"""
+# def unlocking_boxes(boxes, index_box, opened_boxes, keys):
+#     """Recursive function to open the boxes"""
 
-    n_boxes = len(boxes)
-    expected_boxes = list(range(0, n_boxes))
+#     n_boxes = len(boxes)
+#     expected_boxes = list(range(0, n_boxes))
 
-    # Number of the boxes opened
-    if index_box not in opened_boxes:
-        opened_boxes.append(index_box)
-        opened_boxes.sort()
+#     # Number of the boxes opened
+#     if index_box not in opened_boxes:
+#         opened_boxes.append(index_box)
+#         opened_boxes.sort()
 
-    # number of keys we belong
-    for key in boxes[index_box]:
-        if key not in keys:
-            keys.append(key)
+#     # number of keys we belong
+#     for key in boxes[index_box]:
+#         if key not in keys:
+#             keys.append(key)
 
-    # Verify if the keys can open all the boxes
-    if expected_boxes == opened_boxes:
-        return True
+#     # Verify if the keys can open all the boxes
+#     if expected_boxes == opened_boxes:
+#         return True
 
-    for key in keys:
-        if key not in opened_boxes:
-            return unlocking_boxes(boxes, key, opened_boxes, keys)
+#     for key in keys:
+#         if key not in opened_boxes:
+#             return unlocking_boxes(boxes, key, opened_boxes, keys)
 
-    return False
+#     return False
 
 
 def canUnlockAll(boxes):
     """Method that determines if all the boxes can be opened."""
-    if type(boxes) is not list:
-        return False
-    elif (len(boxes)) == 0:
-        return False
+    # if type(boxes) is not list:
+    #     return False
+    # elif (len(boxes)) == 0:
+    #     return False
 
-    opened_boxes = [0]
-    keys = []
+    # opened_boxes = [0]
+    # keys = []
 
-    result = unlocking_boxes(boxes, 0, opened_boxes, keys)
-    return result
+    # result = unlocking_boxes(boxes, 0, opened_boxes, keys)
+    # return result
+
+    for key in range(1, len(boxes) - 1):
+        boxes_checked = False
+
+        for index in range(len(boxes)):
+            if key in boxes[index] and key != index:
+                boxes_checked = True
+                break
+
+        if boxes_checked is False:
+            return False
+
+    return True
