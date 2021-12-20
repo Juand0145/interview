@@ -20,3 +20,19 @@ new->right = NULL;
 
 return (new);
 }
+
+/**
+ * height_recursion - Function that calculates the height using recursion
+ * @tree: node to find recursion
+ * Return: the number of height nodes
+ */
+int height_recursion(const binary_tree_t *tree)
+{
+int left_count = 0, right_count = 0;
+
+if (tree->left)
+left_count = height_recursion(tree->left);
+if (tree->right)
+right_count = height_recursion(tree->right);
+return ((left_count > right_count) ? left_count + 1 : right_count + 1);
+}
