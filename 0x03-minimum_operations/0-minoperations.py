@@ -9,11 +9,10 @@ def minOperations(n):
     n: number of character to acomplish
     return 0 the minimun operation or None
     """
-    if type(n) is not int or n < 1:
+    if type(n) is not int or n < 2:
         return 0
 
     min_iterations = n
-    divisors = [1]
 
     for i in range(int(n/2))[2:]:
         if n % i == 0:
