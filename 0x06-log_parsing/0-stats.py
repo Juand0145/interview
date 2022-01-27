@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Reads stdin line by line and computes metrics"""
+"""script that reads stdin line by line and computes metrics"""
 
 if __name__ == "__main__":
     import sys
