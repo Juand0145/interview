@@ -19,7 +19,6 @@ heap_sort_print(array, size, array, size);
  * @size: size of array to sort
  * @array_p: array to print
  * @size_p: size of array to print
- *
  */
 void heap_sort_print(int *array, size_t size, int *array_p, size_t size_p)
 {
