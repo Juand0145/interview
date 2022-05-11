@@ -1,5 +1,5 @@
-#ifndef SORT_H
-#define SORT_H
+#ifndef BINARY_TREES
+#define BINARY_TREES
 
 #include <stdio.h>
 #include <stdlib.h>

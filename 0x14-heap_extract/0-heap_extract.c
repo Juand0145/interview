@@ -1,4 +1,4 @@
-#include "sort.h"
+#include "binary_trees.h"
 
 /**
  * heap_sort - sorts an array of ints in ascending order
