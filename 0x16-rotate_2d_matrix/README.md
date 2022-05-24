@@ -1,6 +1,13 @@
-# 0x16. Rotate 2D Matrix
-Given an n x n 2D matrix, rotate it 90 degrees clockwise.
+# 0x12. Transformer Applications
+In the following directory we will find a copilation of files wich porpuse is to understand the concepts of using  tronsformers and help us to answer the next questions.
+-   How to use Transformers for Machine Translation
+-   How to write a custom train/test loop in Keras
+-   How to use Tensorflow Datasets
 
-Prototype: def rotate_2d_matrix(matrix):
-Do not return anything. The matrix must be edited in-place.
-You can assume the matrix will have 2 dimensions and will not be empty.
+## Files
+ - 0-dataset.py
+ - 1-dataset.py
+ - 2-dataset.py
+ - 3-dataset.py
+ - 4-create_masks.py
+ - 5-transformer.py, 5-train.py
